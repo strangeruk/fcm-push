@@ -1,0 +1,1877 @@
+INFO  23-04-28 10:04:58[main] [NotificationApplication:55] - Starting NotificationApplication using Java 1.8.0_291 on bag-yong-ug-ui-MacBookPro-3.local with PID 80144 (/Users/ukpark/Downloads/notification/target/classes started by ukpark in /Users/ukpark/Downloads/notification)
+INFO  23-04-28 10:04:58[main] [NotificationApplication:631] - No active profile set, falling back to 1 default profile: "default"
+INFO  23-04-28 10:04:59[main] [RepositoryConfigurationDelegate:132] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+INFO  23-04-28 10:04:59[main] [RepositoryConfigurationDelegate:201] - Finished Spring Data repository scanning in 30 ms. Found 1 JPA repository interfaces.
+INFO  23-04-28 10:04:59[main] [TomcatWebServer:108] - Tomcat initialized with port(s): 20092 (http)
+INFO  23-04-28 10:04:59[main] [Http11NioProtocol:173] - Initializing ProtocolHandler ["http-nio-20092"]
+INFO  23-04-28 10:04:59[main] [StandardService:173] - Starting service [Tomcat]
+INFO  23-04-28 10:04:59[main] [StandardEngine:173] - Starting Servlet engine: [Apache Tomcat/9.0.74]
+INFO  23-04-28 10:04:59[main] [[/]:173] - Initializing Spring embedded WebApplicationContext
+INFO  23-04-28 10:04:59[main] [ServletWebServerApplicationContext:292] - Root WebApplicationContext: initialization completed in 974 ms
+INFO  23-04-28 10:05:00[main] [LogHelper:31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+INFO  23-04-28 10:05:00[main] [Version:44] - HHH000412: Hibernate ORM core version 5.6.15.Final
+INFO  23-04-28 10:05:00[main] [Version:56] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+INFO  23-04-28 10:05:00[main] [HikariDataSource:110] - HikariPool-1 - Starting...
+INFO  23-04-28 10:05:00[main] [HikariDataSource:123] - HikariPool-1 - Start completed.
+INFO  23-04-28 10:05:00[main] [Dialect:175] - HHH000400: Using dialect: org.hibernate.dialect.MariaDB106Dialect
+INFO  23-04-28 10:05:00[main] [JtaPlatformInitiator:52] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+INFO  23-04-28 10:05:00[main] [LocalContainerEntityManagerFactoryBean:437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+WARN  23-04-28 10:05:01[main] [JpaBaseConfiguration$JpaWebConfiguration:223] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+INFO  23-04-28 10:05:01[main] [Http11NioProtocol:173] - Starting ProtocolHandler ["http-nio-20092"]
+INFO  23-04-28 10:05:01[main] [TomcatWebServer:220] - Tomcat started on port(s): 20092 (http) with context path ''
+INFO  23-04-28 10:05:01[main] [NotificationApplication:61] - Started NotificationApplication in 3.089 seconds (JVM running for 3.689)
+INFO  23-04-28 10:05:18[http-nio-20092-exec-2] [[/]:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO  23-04-28 10:05:18[http-nio-20092-exec-2] [DispatcherServlet:525] - Initializing Servlet 'dispatcherServlet'
+INFO  23-04-28 10:05:18[http-nio-20092-exec-2] [DispatcherServlet:547] - Completed initialization in 3 ms
+INFO  23-04-28 10:05:19[http-nio-20092-exec-2] [PushService:67] - success message sending | asdf | projects/sokcho-dev-b68a6/messages/0:1682643919262829%8afdf08b8afdf08b
+ERROR 23-04-28 10:07:58[http-nio-20092-exec-4] [PushService:74] - Failed to send push notification: d61a2ed3980ad7c8
+com.google.firebase.messaging.FirebaseMessagingException: The registration token is not a valid FCM registration token
+	at com.google.firebase.messaging.FirebaseMessagingClientImpl.newException(FirebaseMessagingClientImpl.java:306)
+	at com.google.firebase.messaging.FirebaseMessagingClientImpl.createExceptionFromResponse(FirebaseMessagingClientImpl.java:211)
+	at com.google.firebase.messaging.FirebaseMessagingClientImpl.send(FirebaseMessagingClientImpl.java:127)
+	at com.google.firebase.messaging.FirebaseMessaging$1.execute(FirebaseMessaging.java:139)
+	at com.google.firebase.messaging.FirebaseMessaging$1.execute(FirebaseMessaging.java:136)
+	at com.google.firebase.internal.CallableOperation.call(CallableOperation.java:36)
+	at com.google.firebase.messaging.FirebaseMessaging.send(FirebaseMessaging.java:106)
+	at com.google.firebase.messaging.FirebaseMessaging.send(FirebaseMessaging.java:90)
+	at com.hni.notification.push.PushService.sendMessage(PushService.java:62)
+	at com.hni.notification.push.PushService.sendPushServer(PushService.java:23)
+	at com.hni.notification.push.PushController.SendNotificationForJson(PushController.java:25)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: com.google.api.client.http.HttpResponseException: 400 Bad Request
+{
+  "error": {
+    "code": 400,
+    "message": "The registration token is not a valid FCM registration token",
+    "status": "INVALID_ARGUMENT",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.firebase.fcm.v1.FcmError",
+        "errorCode": "INVALID_ARGUMENT"
+      }
+    ]
+  }
+}
+
+	at com.google.api.client.http.HttpRequest.execute(HttpRequest.java:1072)
+	at com.google.firebase.messaging.FirebaseMessagingClientImpl.sendSingleRequest(FirebaseMessagingClientImpl.java:153)
+	at com.google.firebase.messaging.FirebaseMessagingClientImpl.send(FirebaseMessagingClientImpl.java:125)
+	... 58 common frames omitted
+INFO  23-04-28 10:09:06[SpringApplicationShutdownHook] [LocalContainerEntityManagerFactoryBean:651] - Closing JPA EntityManagerFactory for persistence unit 'default'
+INFO  23-04-28 10:09:06[SpringApplicationShutdownHook] [HikariDataSource:350] - HikariPool-1 - Shutdown initiated...
+INFO  23-04-28 10:09:06[SpringApplicationShutdownHook] [HikariDataSource:352] - HikariPool-1 - Shutdown completed.
+INFO  23-04-28 10:09:09[main] [NotificationApplication:55] - Starting NotificationApplication using Java 1.8.0_291 on bag-yong-ug-ui-MacBookPro-3.local with PID 80692 (/Users/ukpark/Downloads/notification/target/classes started by ukpark in /Users/ukpark/Downloads/notification)
+INFO  23-04-28 10:09:09[main] [NotificationApplication:631] - No active profile set, falling back to 1 default profile: "default"
+INFO  23-04-28 10:09:10[main] [RepositoryConfigurationDelegate:132] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+INFO  23-04-28 10:09:10[main] [RepositoryConfigurationDelegate:201] - Finished Spring Data repository scanning in 27 ms. Found 1 JPA repository interfaces.
+INFO  23-04-28 10:09:10[main] [TomcatWebServer:108] - Tomcat initialized with port(s): 20092 (http)
+INFO  23-04-28 10:09:10[main] [Http11NioProtocol:173] - Initializing ProtocolHandler ["http-nio-20092"]
+INFO  23-04-28 10:09:10[main] [StandardService:173] - Starting service [Tomcat]
+INFO  23-04-28 10:09:10[main] [StandardEngine:173] - Starting Servlet engine: [Apache Tomcat/9.0.74]
+INFO  23-04-28 10:09:10[main] [[/]:173] - Initializing Spring embedded WebApplicationContext
+INFO  23-04-28 10:09:10[main] [ServletWebServerApplicationContext:292] - Root WebApplicationContext: initialization completed in 870 ms
+INFO  23-04-28 10:09:10[main] [LogHelper:31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+INFO  23-04-28 10:09:11[main] [Version:44] - HHH000412: Hibernate ORM core version 5.6.15.Final
+INFO  23-04-28 10:09:11[main] [Version:56] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+INFO  23-04-28 10:09:11[main] [HikariDataSource:110] - HikariPool-1 - Starting...
+INFO  23-04-28 10:09:11[main] [HikariDataSource:123] - HikariPool-1 - Start completed.
+INFO  23-04-28 10:09:11[main] [Dialect:175] - HHH000400: Using dialect: org.hibernate.dialect.MariaDB106Dialect
+INFO  23-04-28 10:09:11[main] [JtaPlatformInitiator:52] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+INFO  23-04-28 10:09:11[main] [LocalContainerEntityManagerFactoryBean:437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+WARN  23-04-28 10:09:11[main] [JpaBaseConfiguration$JpaWebConfiguration:223] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+INFO  23-04-28 10:09:12[main] [Http11NioProtocol:173] - Starting ProtocolHandler ["http-nio-20092"]
+INFO  23-04-28 10:09:12[main] [TomcatWebServer:220] - Tomcat started on port(s): 20092 (http) with context path ''
+INFO  23-04-28 10:09:12[main] [NotificationApplication:61] - Started NotificationApplication in 2.532 seconds (JVM running for 3.214)
+INFO  23-04-28 10:09:15[http-nio-20092-exec-1] [[/]:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO  23-04-28 10:09:15[http-nio-20092-exec-1] [DispatcherServlet:525] - Initializing Servlet 'dispatcherServlet'
+INFO  23-04-28 10:09:15[http-nio-20092-exec-1] [DispatcherServlet:547] - Completed initialization in 1 ms
+ERROR 23-04-28 10:09:16[http-nio-20092-exec-1] [PushService:74] - Failed to send push notification: d61a2ed3980ad7c8
+com.google.firebase.messaging.FirebaseMessagingException: The registration token is not a valid FCM registration token
+	at com.google.firebase.messaging.FirebaseMessagingClientImpl.newException(FirebaseMessagingClientImpl.java:306)
+	at com.google.firebase.messaging.FirebaseMessagingClientImpl.createExceptionFromResponse(FirebaseMessagingClientImpl.java:211)
+	at com.google.firebase.messaging.FirebaseMessagingClientImpl.send(FirebaseMessagingClientImpl.java:127)
+	at com.google.firebase.messaging.FirebaseMessaging$1.execute(FirebaseMessaging.java:139)
+	at com.google.firebase.messaging.FirebaseMessaging$1.execute(FirebaseMessaging.java:136)
+	at com.google.firebase.internal.CallableOperation.call(CallableOperation.java:36)
+	at com.google.firebase.messaging.FirebaseMessaging.send(FirebaseMessaging.java:106)
+	at com.google.firebase.messaging.FirebaseMessaging.send(FirebaseMessaging.java:90)
+	at com.hni.notification.push.PushService.sendMessage(PushService.java:62)
+	at com.hni.notification.push.PushService.sendPushServer(PushService.java:23)
+	at com.hni.notification.push.PushController.SendNotificationForJson(PushController.java:25)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: com.google.api.client.http.HttpResponseException: 400 Bad Request
+{
+  "error": {
+    "code": 400,
+    "message": "The registration token is not a valid FCM registration token",
+    "status": "INVALID_ARGUMENT",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.firebase.fcm.v1.FcmError",
+        "errorCode": "INVALID_ARGUMENT"
+      }
+    ]
+  }
+}
+
+	at com.google.api.client.http.HttpRequest.execute(HttpRequest.java:1072)
+	at com.google.firebase.messaging.FirebaseMessagingClientImpl.sendSingleRequest(FirebaseMessagingClientImpl.java:153)
+	at com.google.firebase.messaging.FirebaseMessagingClientImpl.send(FirebaseMessagingClientImpl.java:125)
+	... 58 common frames omitted
+ERROR 23-04-28 10:09:16[http-nio-20092-exec-1] [PushService:75] - Failed to send push notification token: ffn46IMtQtuBCFMUsbEEUh%3AAPA91bHvpj9w0bQ0EMujUiL0cEUXH2UJ7CUSqmNc8BXuQgL7u-JfxySIDE3EoLhd6NYckYzcWu5rozFWW_6LXzpqmekV0KmC2ImjvPrJp6pgM8TGYdwO5Vt-L3Bbsr9D_8W4xzBsKJzP
+com.google.firebase.messaging.FirebaseMessagingException: The registration token is not a valid FCM registration token
+	at com.google.firebase.messaging.FirebaseMessagingClientImpl.newException(FirebaseMessagingClientImpl.java:306)
+	at com.google.firebase.messaging.FirebaseMessagingClientImpl.createExceptionFromResponse(FirebaseMessagingClientImpl.java:211)
+	at com.google.firebase.messaging.FirebaseMessagingClientImpl.send(FirebaseMessagingClientImpl.java:127)
+	at com.google.firebase.messaging.FirebaseMessaging$1.execute(FirebaseMessaging.java:139)
+	at com.google.firebase.messaging.FirebaseMessaging$1.execute(FirebaseMessaging.java:136)
+	at com.google.firebase.internal.CallableOperation.call(CallableOperation.java:36)
+	at com.google.firebase.messaging.FirebaseMessaging.send(FirebaseMessaging.java:106)
+	at com.google.firebase.messaging.FirebaseMessaging.send(FirebaseMessaging.java:90)
+	at com.hni.notification.push.PushService.sendMessage(PushService.java:62)
+	at com.hni.notification.push.PushService.sendPushServer(PushService.java:23)
+	at com.hni.notification.push.PushController.SendNotificationForJson(PushController.java:25)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: com.google.api.client.http.HttpResponseException: 400 Bad Request
+{
+  "error": {
+    "code": 400,
+    "message": "The registration token is not a valid FCM registration token",
+    "status": "INVALID_ARGUMENT",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.firebase.fcm.v1.FcmError",
+        "errorCode": "INVALID_ARGUMENT"
+      }
+    ]
+  }
+}
+
+	at com.google.api.client.http.HttpRequest.execute(HttpRequest.java:1072)
+	at com.google.firebase.messaging.FirebaseMessagingClientImpl.sendSingleRequest(FirebaseMessagingClientImpl.java:153)
+	at com.google.firebase.messaging.FirebaseMessagingClientImpl.send(FirebaseMessagingClientImpl.java:125)
+	... 58 common frames omitted
+INFO  23-04-28 10:14:52[SpringApplicationShutdownHook] [LocalContainerEntityManagerFactoryBean:651] - Closing JPA EntityManagerFactory for persistence unit 'default'
+INFO  23-04-28 10:14:52[SpringApplicationShutdownHook] [HikariDataSource:350] - HikariPool-1 - Shutdown initiated...
+INFO  23-04-28 10:14:52[SpringApplicationShutdownHook] [HikariDataSource:352] - HikariPool-1 - Shutdown completed.
+INFO  23-04-28 10:14:57[main] [NotificationApplication:55] - Starting NotificationApplication using Java 1.8.0_291 on bag-yong-ug-ui-MacBookPro-3.local with PID 81959 (/Users/ukpark/Downloads/notification/target/classes started by ukpark in /Users/ukpark/Downloads/notification)
+INFO  23-04-28 10:14:57[main] [NotificationApplication:631] - No active profile set, falling back to 1 default profile: "default"
+INFO  23-04-28 10:14:57[main] [RepositoryConfigurationDelegate:132] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+INFO  23-04-28 10:14:57[main] [RepositoryConfigurationDelegate:201] - Finished Spring Data repository scanning in 26 ms. Found 1 JPA repository interfaces.
+INFO  23-04-28 10:14:58[main] [TomcatWebServer:108] - Tomcat initialized with port(s): 20092 (http)
+INFO  23-04-28 10:14:58[main] [Http11NioProtocol:173] - Initializing ProtocolHandler ["http-nio-20092"]
+INFO  23-04-28 10:14:58[main] [StandardService:173] - Starting service [Tomcat]
+INFO  23-04-28 10:14:58[main] [StandardEngine:173] - Starting Servlet engine: [Apache Tomcat/9.0.74]
+INFO  23-04-28 10:14:58[main] [[/]:173] - Initializing Spring embedded WebApplicationContext
+INFO  23-04-28 10:14:58[main] [ServletWebServerApplicationContext:292] - Root WebApplicationContext: initialization completed in 879 ms
+INFO  23-04-28 10:14:58[main] [LogHelper:31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+INFO  23-04-28 10:14:58[main] [Version:44] - HHH000412: Hibernate ORM core version 5.6.15.Final
+INFO  23-04-28 10:14:58[main] [Version:56] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+INFO  23-04-28 10:14:58[main] [HikariDataSource:110] - HikariPool-1 - Starting...
+INFO  23-04-28 10:14:58[main] [HikariDataSource:123] - HikariPool-1 - Start completed.
+INFO  23-04-28 10:14:58[main] [Dialect:175] - HHH000400: Using dialect: org.hibernate.dialect.MariaDB106Dialect
+INFO  23-04-28 10:14:59[main] [JtaPlatformInitiator:52] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+INFO  23-04-28 10:14:59[main] [LocalContainerEntityManagerFactoryBean:437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+WARN  23-04-28 10:14:59[main] [JpaBaseConfiguration$JpaWebConfiguration:223] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+INFO  23-04-28 10:15:00[main] [Http11NioProtocol:173] - Starting ProtocolHandler ["http-nio-20092"]
+INFO  23-04-28 10:15:00[main] [TomcatWebServer:220] - Tomcat started on port(s): 20092 (http) with context path ''
+INFO  23-04-28 10:15:00[main] [NotificationApplication:61] - Started NotificationApplication in 3.042 seconds (JVM running for 3.734)
+INFO  23-04-28 10:16:42[http-nio-20092-exec-1] [[/]:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO  23-04-28 10:16:42[http-nio-20092-exec-1] [DispatcherServlet:525] - Initializing Servlet 'dispatcherServlet'
+INFO  23-04-28 10:16:42[http-nio-20092-exec-1] [DispatcherServlet:547] - Completed initialization in 2 ms
+ERROR 23-04-28 10:16:44[http-nio-20092-exec-1] [PushService:78] - Failed to send push notification: d61a2ed3980ad7c8
+com.google.firebase.messaging.FirebaseMessagingException: The registration token is not a valid FCM registration token
+	at com.google.firebase.messaging.FirebaseMessagingClientImpl.newException(FirebaseMessagingClientImpl.java:306)
+	at com.google.firebase.messaging.FirebaseMessagingClientImpl.createExceptionFromResponse(FirebaseMessagingClientImpl.java:211)
+	at com.google.firebase.messaging.FirebaseMessagingClientImpl.send(FirebaseMessagingClientImpl.java:127)
+	at com.google.firebase.messaging.FirebaseMessaging$1.execute(FirebaseMessaging.java:139)
+	at com.google.firebase.messaging.FirebaseMessaging$1.execute(FirebaseMessaging.java:136)
+	at com.google.firebase.internal.CallableOperation.call(CallableOperation.java:36)
+	at com.google.firebase.messaging.FirebaseMessaging.send(FirebaseMessaging.java:106)
+	at com.google.firebase.messaging.FirebaseMessaging.send(FirebaseMessaging.java:90)
+	at com.hni.notification.push.PushService.sendMessage(PushService.java:66)
+	at com.hni.notification.push.PushService.sendPushServer(PushService.java:27)
+	at com.hni.notification.push.PushController.SendNotificationForJson(PushController.java:27)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: com.google.api.client.http.HttpResponseException: 400 Bad Request
+{
+  "error": {
+    "code": 400,
+    "message": "The registration token is not a valid FCM registration token",
+    "status": "INVALID_ARGUMENT",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.firebase.fcm.v1.FcmError",
+        "errorCode": "INVALID_ARGUMENT"
+      }
+    ]
+  }
+}
+
+	at com.google.api.client.http.HttpRequest.execute(HttpRequest.java:1072)
+	at com.google.firebase.messaging.FirebaseMessagingClientImpl.sendSingleRequest(FirebaseMessagingClientImpl.java:153)
+	at com.google.firebase.messaging.FirebaseMessagingClientImpl.send(FirebaseMessagingClientImpl.java:125)
+	... 58 common frames omitted
+ERROR 23-04-28 10:16:44[http-nio-20092-exec-1] [PushService:79] - Failed to send push notification token: ffn46IMtQtuBCFMUsbEEUh%3AAPA91bHvpj9w0bQ0EMujUiL0cEUXH2UJ7CUSqmNc8BXuQgL7u-JfxySIDE3EoLhd6NYckYzcWu5rozFWW_6LXzpqmekV0KmC2ImjvPrJp6pgM8TGYdwO5Vt-L3Bbsr9D_8W4xzBsKJzP
+com.google.firebase.messaging.FirebaseMessagingException: The registration token is not a valid FCM registration token
+	at com.google.firebase.messaging.FirebaseMessagingClientImpl.newException(FirebaseMessagingClientImpl.java:306)
+	at com.google.firebase.messaging.FirebaseMessagingClientImpl.createExceptionFromResponse(FirebaseMessagingClientImpl.java:211)
+	at com.google.firebase.messaging.FirebaseMessagingClientImpl.send(FirebaseMessagingClientImpl.java:127)
+	at com.google.firebase.messaging.FirebaseMessaging$1.execute(FirebaseMessaging.java:139)
+	at com.google.firebase.messaging.FirebaseMessaging$1.execute(FirebaseMessaging.java:136)
+	at com.google.firebase.internal.CallableOperation.call(CallableOperation.java:36)
+	at com.google.firebase.messaging.FirebaseMessaging.send(FirebaseMessaging.java:106)
+	at com.google.firebase.messaging.FirebaseMessaging.send(FirebaseMessaging.java:90)
+	at com.hni.notification.push.PushService.sendMessage(PushService.java:66)
+	at com.hni.notification.push.PushService.sendPushServer(PushService.java:27)
+	at com.hni.notification.push.PushController.SendNotificationForJson(PushController.java:27)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: com.google.api.client.http.HttpResponseException: 400 Bad Request
+{
+  "error": {
+    "code": 400,
+    "message": "The registration token is not a valid FCM registration token",
+    "status": "INVALID_ARGUMENT",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.firebase.fcm.v1.FcmError",
+        "errorCode": "INVALID_ARGUMENT"
+      }
+    ]
+  }
+}
+
+	at com.google.api.client.http.HttpRequest.execute(HttpRequest.java:1072)
+	at com.google.firebase.messaging.FirebaseMessagingClientImpl.sendSingleRequest(FirebaseMessagingClientImpl.java:153)
+	at com.google.firebase.messaging.FirebaseMessagingClientImpl.send(FirebaseMessagingClientImpl.java:125)
+	... 58 common frames omitted
+INFO  23-04-28 10:21:03[SpringApplicationShutdownHook] [LocalContainerEntityManagerFactoryBean:651] - Closing JPA EntityManagerFactory for persistence unit 'default'
+INFO  23-04-28 10:21:03[SpringApplicationShutdownHook] [HikariDataSource:350] - HikariPool-1 - Shutdown initiated...
+INFO  23-04-28 10:21:03[SpringApplicationShutdownHook] [HikariDataSource:352] - HikariPool-1 - Shutdown completed.
+INFO  23-04-28 10:21:08[main] [NotificationApplication:55] - Starting NotificationApplication using Java 1.8.0_291 on bag-yong-ug-ui-MacBookPro-3.local with PID 82807 (/Users/ukpark/Downloads/notification/target/classes started by ukpark in /Users/ukpark/Downloads/notification)
+INFO  23-04-28 10:21:08[main] [NotificationApplication:631] - No active profile set, falling back to 1 default profile: "default"
+INFO  23-04-28 10:21:08[main] [RepositoryConfigurationDelegate:132] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+INFO  23-04-28 10:21:08[main] [RepositoryConfigurationDelegate:201] - Finished Spring Data repository scanning in 28 ms. Found 1 JPA repository interfaces.
+INFO  23-04-28 10:21:08[main] [TomcatWebServer:108] - Tomcat initialized with port(s): 20092 (http)
+INFO  23-04-28 10:21:08[main] [Http11NioProtocol:173] - Initializing ProtocolHandler ["http-nio-20092"]
+INFO  23-04-28 10:21:08[main] [StandardService:173] - Starting service [Tomcat]
+INFO  23-04-28 10:21:08[main] [StandardEngine:173] - Starting Servlet engine: [Apache Tomcat/9.0.74]
+INFO  23-04-28 10:21:09[main] [[/]:173] - Initializing Spring embedded WebApplicationContext
+INFO  23-04-28 10:21:09[main] [ServletWebServerApplicationContext:292] - Root WebApplicationContext: initialization completed in 838 ms
+INFO  23-04-28 10:21:09[main] [LogHelper:31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+INFO  23-04-28 10:21:09[main] [Version:44] - HHH000412: Hibernate ORM core version 5.6.15.Final
+INFO  23-04-28 10:21:09[main] [Version:56] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+INFO  23-04-28 10:21:09[main] [HikariDataSource:110] - HikariPool-1 - Starting...
+INFO  23-04-28 10:21:09[main] [HikariDataSource:123] - HikariPool-1 - Start completed.
+INFO  23-04-28 10:21:09[main] [Dialect:175] - HHH000400: Using dialect: org.hibernate.dialect.MariaDB106Dialect
+INFO  23-04-28 10:21:09[main] [JtaPlatformInitiator:52] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+INFO  23-04-28 10:21:09[main] [LocalContainerEntityManagerFactoryBean:437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+WARN  23-04-28 10:21:10[main] [JpaBaseConfiguration$JpaWebConfiguration:223] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+INFO  23-04-28 10:21:10[main] [Http11NioProtocol:173] - Starting ProtocolHandler ["http-nio-20092"]
+INFO  23-04-28 10:21:10[main] [TomcatWebServer:220] - Tomcat started on port(s): 20092 (http) with context path ''
+INFO  23-04-28 10:21:10[main] [NotificationApplication:61] - Started NotificationApplication in 2.495 seconds (JVM running for 3.246)
+INFO  23-04-28 10:21:25[http-nio-20092-exec-1] [[/]:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO  23-04-28 10:21:25[http-nio-20092-exec-1] [DispatcherServlet:525] - Initializing Servlet 'dispatcherServlet'
+INFO  23-04-28 10:21:25[http-nio-20092-exec-1] [DispatcherServlet:547] - Completed initialization in 4 ms
+ERROR 23-04-28 10:21:27[http-nio-20092-exec-1] [PushService:81] - Failed to send push notification: d61a2ed3980ad7c8
+com.google.firebase.messaging.FirebaseMessagingException: The registration token is not a valid FCM registration token
+	at com.google.firebase.messaging.FirebaseMessagingClientImpl.newException(FirebaseMessagingClientImpl.java:306)
+	at com.google.firebase.messaging.FirebaseMessagingClientImpl.createExceptionFromResponse(FirebaseMessagingClientImpl.java:211)
+	at com.google.firebase.messaging.FirebaseMessagingClientImpl.send(FirebaseMessagingClientImpl.java:127)
+	at com.google.firebase.messaging.FirebaseMessaging$1.execute(FirebaseMessaging.java:139)
+	at com.google.firebase.messaging.FirebaseMessaging$1.execute(FirebaseMessaging.java:136)
+	at com.google.firebase.internal.CallableOperation.call(CallableOperation.java:36)
+	at com.google.firebase.messaging.FirebaseMessaging.send(FirebaseMessaging.java:106)
+	at com.google.firebase.messaging.FirebaseMessaging.send(FirebaseMessaging.java:90)
+	at com.hni.notification.push.PushService.sendMessage(PushService.java:69)
+	at com.hni.notification.push.PushService.sendPushServer(PushService.java:30)
+	at com.hni.notification.push.PushController.SendNotificationForJson(PushController.java:27)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: com.google.api.client.http.HttpResponseException: 400 Bad Request
+{
+  "error": {
+    "code": 400,
+    "message": "The registration token is not a valid FCM registration token",
+    "status": "INVALID_ARGUMENT",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.firebase.fcm.v1.FcmError",
+        "errorCode": "INVALID_ARGUMENT"
+      }
+    ]
+  }
+}
+
+	at com.google.api.client.http.HttpRequest.execute(HttpRequest.java:1072)
+	at com.google.firebase.messaging.FirebaseMessagingClientImpl.sendSingleRequest(FirebaseMessagingClientImpl.java:153)
+	at com.google.firebase.messaging.FirebaseMessagingClientImpl.send(FirebaseMessagingClientImpl.java:125)
+	... 58 common frames omitted
+ERROR 23-04-28 10:21:27[http-nio-20092-exec-1] [PushService:82] - Failed to send push notification token: ffn46IMtQtuBCFMUsbEEUh%3AAPA91bHvpj9w0bQ0EMujUiL0cEUXH2UJ7CUSqmNc8BXuQgL7u-JfxySIDE3EoLhd6NYckYzcWu5rozFWW_6LXzpqmekV0KmC2ImjvPrJp6pgM8TGYdwO5Vt-L3Bbsr9D_8W4xzBsKJzP
+com.google.firebase.messaging.FirebaseMessagingException: The registration token is not a valid FCM registration token
+	at com.google.firebase.messaging.FirebaseMessagingClientImpl.newException(FirebaseMessagingClientImpl.java:306)
+	at com.google.firebase.messaging.FirebaseMessagingClientImpl.createExceptionFromResponse(FirebaseMessagingClientImpl.java:211)
+	at com.google.firebase.messaging.FirebaseMessagingClientImpl.send(FirebaseMessagingClientImpl.java:127)
+	at com.google.firebase.messaging.FirebaseMessaging$1.execute(FirebaseMessaging.java:139)
+	at com.google.firebase.messaging.FirebaseMessaging$1.execute(FirebaseMessaging.java:136)
+	at com.google.firebase.internal.CallableOperation.call(CallableOperation.java:36)
+	at com.google.firebase.messaging.FirebaseMessaging.send(FirebaseMessaging.java:106)
+	at com.google.firebase.messaging.FirebaseMessaging.send(FirebaseMessaging.java:90)
+	at com.hni.notification.push.PushService.sendMessage(PushService.java:69)
+	at com.hni.notification.push.PushService.sendPushServer(PushService.java:30)
+	at com.hni.notification.push.PushController.SendNotificationForJson(PushController.java:27)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: com.google.api.client.http.HttpResponseException: 400 Bad Request
+{
+  "error": {
+    "code": 400,
+    "message": "The registration token is not a valid FCM registration token",
+    "status": "INVALID_ARGUMENT",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.firebase.fcm.v1.FcmError",
+        "errorCode": "INVALID_ARGUMENT"
+      }
+    ]
+  }
+}
+
+	at com.google.api.client.http.HttpRequest.execute(HttpRequest.java:1072)
+	at com.google.firebase.messaging.FirebaseMessagingClientImpl.sendSingleRequest(FirebaseMessagingClientImpl.java:153)
+	at com.google.firebase.messaging.FirebaseMessagingClientImpl.send(FirebaseMessagingClientImpl.java:125)
+	... 58 common frames omitted
+INFO  23-04-28 10:23:49[SpringApplicationShutdownHook] [LocalContainerEntityManagerFactoryBean:651] - Closing JPA EntityManagerFactory for persistence unit 'default'
+INFO  23-04-28 10:23:49[SpringApplicationShutdownHook] [HikariDataSource:350] - HikariPool-1 - Shutdown initiated...
+INFO  23-04-28 10:23:49[SpringApplicationShutdownHook] [HikariDataSource:352] - HikariPool-1 - Shutdown completed.
+INFO  23-04-28 10:23:53[main] [NotificationApplication:55] - Starting NotificationApplication using Java 1.8.0_291 on bag-yong-ug-ui-MacBookPro-3.local with PID 83181 (/Users/ukpark/Downloads/notification/target/classes started by ukpark in /Users/ukpark/Downloads/notification)
+INFO  23-04-28 10:23:53[main] [NotificationApplication:631] - No active profile set, falling back to 1 default profile: "default"
+INFO  23-04-28 10:23:53[main] [RepositoryConfigurationDelegate:132] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+INFO  23-04-28 10:23:53[main] [RepositoryConfigurationDelegate:201] - Finished Spring Data repository scanning in 27 ms. Found 1 JPA repository interfaces.
+INFO  23-04-28 10:23:54[main] [TomcatWebServer:108] - Tomcat initialized with port(s): 20092 (http)
+INFO  23-04-28 10:23:54[main] [Http11NioProtocol:173] - Initializing ProtocolHandler ["http-nio-20092"]
+INFO  23-04-28 10:23:54[main] [StandardService:173] - Starting service [Tomcat]
+INFO  23-04-28 10:23:54[main] [StandardEngine:173] - Starting Servlet engine: [Apache Tomcat/9.0.74]
+INFO  23-04-28 10:23:54[main] [[/]:173] - Initializing Spring embedded WebApplicationContext
+INFO  23-04-28 10:23:54[main] [ServletWebServerApplicationContext:292] - Root WebApplicationContext: initialization completed in 873 ms
+INFO  23-04-28 10:23:54[main] [LogHelper:31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+INFO  23-04-28 10:23:54[main] [Version:44] - HHH000412: Hibernate ORM core version 5.6.15.Final
+INFO  23-04-28 10:23:54[main] [Version:56] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+INFO  23-04-28 10:23:54[main] [HikariDataSource:110] - HikariPool-1 - Starting...
+INFO  23-04-28 10:23:54[main] [HikariDataSource:123] - HikariPool-1 - Start completed.
+INFO  23-04-28 10:23:54[main] [Dialect:175] - HHH000400: Using dialect: org.hibernate.dialect.MariaDB106Dialect
+INFO  23-04-28 10:23:55[main] [JtaPlatformInitiator:52] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+INFO  23-04-28 10:23:55[main] [LocalContainerEntityManagerFactoryBean:437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+WARN  23-04-28 10:23:55[main] [JpaBaseConfiguration$JpaWebConfiguration:223] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+INFO  23-04-28 10:23:55[main] [Http11NioProtocol:173] - Starting ProtocolHandler ["http-nio-20092"]
+INFO  23-04-28 10:23:55[main] [TomcatWebServer:220] - Tomcat started on port(s): 20092 (http) with context path ''
+INFO  23-04-28 10:23:55[main] [NotificationApplication:61] - Started NotificationApplication in 2.597 seconds (JVM running for 3.138)
+INFO  23-04-28 10:24:25[http-nio-20092-exec-1] [[/]:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO  23-04-28 10:24:25[http-nio-20092-exec-1] [DispatcherServlet:525] - Initializing Servlet 'dispatcherServlet'
+INFO  23-04-28 10:24:25[http-nio-20092-exec-1] [DispatcherServlet:547] - Completed initialization in 1 ms
+ERROR 23-04-28 10:24:26[http-nio-20092-exec-1] [PushService:79] - Failed to send push notification: d61a2ed3980ad7c8
+com.google.firebase.messaging.FirebaseMessagingException: The registration token is not a valid FCM registration token
+	at com.google.firebase.messaging.FirebaseMessagingClientImpl.newException(FirebaseMessagingClientImpl.java:306)
+	at com.google.firebase.messaging.FirebaseMessagingClientImpl.createExceptionFromResponse(FirebaseMessagingClientImpl.java:211)
+	at com.google.firebase.messaging.FirebaseMessagingClientImpl.send(FirebaseMessagingClientImpl.java:127)
+	at com.google.firebase.messaging.FirebaseMessaging$1.execute(FirebaseMessaging.java:139)
+	at com.google.firebase.messaging.FirebaseMessaging$1.execute(FirebaseMessaging.java:136)
+	at com.google.firebase.internal.CallableOperation.call(CallableOperation.java:36)
+	at com.google.firebase.messaging.FirebaseMessaging.send(FirebaseMessaging.java:106)
+	at com.google.firebase.messaging.FirebaseMessaging.send(FirebaseMessaging.java:90)
+	at com.hni.notification.push.PushService.sendMessage(PushService.java:67)
+	at com.hni.notification.push.PushService.sendPushServer(PushService.java:27)
+	at com.hni.notification.push.PushController.SendNotificationForJson(PushController.java:27)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: com.google.api.client.http.HttpResponseException: 400 Bad Request
+{
+  "error": {
+    "code": 400,
+    "message": "The registration token is not a valid FCM registration token",
+    "status": "INVALID_ARGUMENT",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.firebase.fcm.v1.FcmError",
+        "errorCode": "INVALID_ARGUMENT"
+      }
+    ]
+  }
+}
+
+	at com.google.api.client.http.HttpRequest.execute(HttpRequest.java:1072)
+	at com.google.firebase.messaging.FirebaseMessagingClientImpl.sendSingleRequest(FirebaseMessagingClientImpl.java:153)
+	at com.google.firebase.messaging.FirebaseMessagingClientImpl.send(FirebaseMessagingClientImpl.java:125)
+	... 58 common frames omitted
+ERROR 23-04-28 10:24:26[http-nio-20092-exec-1] [PushService:80] - Failed to send push notification token: ffn46IMtQtuBCFMUsbEEUh%3AAPA91bHvpj9w0bQ0EMujUiL0cEUXH2UJ7CUSqmNc8BXuQgL7u-JfxySIDE3EoLhd6NYckYzcWu5rozFWW_6LXzpqmekV0KmC2ImjvPrJp6pgM8TGYdwO5Vt-L3Bbsr9D_8W4xzBsKJzP
+com.google.firebase.messaging.FirebaseMessagingException: The registration token is not a valid FCM registration token
+	at com.google.firebase.messaging.FirebaseMessagingClientImpl.newException(FirebaseMessagingClientImpl.java:306)
+	at com.google.firebase.messaging.FirebaseMessagingClientImpl.createExceptionFromResponse(FirebaseMessagingClientImpl.java:211)
+	at com.google.firebase.messaging.FirebaseMessagingClientImpl.send(FirebaseMessagingClientImpl.java:127)
+	at com.google.firebase.messaging.FirebaseMessaging$1.execute(FirebaseMessaging.java:139)
+	at com.google.firebase.messaging.FirebaseMessaging$1.execute(FirebaseMessaging.java:136)
+	at com.google.firebase.internal.CallableOperation.call(CallableOperation.java:36)
+	at com.google.firebase.messaging.FirebaseMessaging.send(FirebaseMessaging.java:106)
+	at com.google.firebase.messaging.FirebaseMessaging.send(FirebaseMessaging.java:90)
+	at com.hni.notification.push.PushService.sendMessage(PushService.java:67)
+	at com.hni.notification.push.PushService.sendPushServer(PushService.java:27)
+	at com.hni.notification.push.PushController.SendNotificationForJson(PushController.java:27)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: com.google.api.client.http.HttpResponseException: 400 Bad Request
+{
+  "error": {
+    "code": 400,
+    "message": "The registration token is not a valid FCM registration token",
+    "status": "INVALID_ARGUMENT",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.firebase.fcm.v1.FcmError",
+        "errorCode": "INVALID_ARGUMENT"
+      }
+    ]
+  }
+}
+
+	at com.google.api.client.http.HttpRequest.execute(HttpRequest.java:1072)
+	at com.google.firebase.messaging.FirebaseMessagingClientImpl.sendSingleRequest(FirebaseMessagingClientImpl.java:153)
+	at com.google.firebase.messaging.FirebaseMessagingClientImpl.send(FirebaseMessagingClientImpl.java:125)
+	... 58 common frames omitted
+INFO  23-04-28 10:41:55[SpringApplicationShutdownHook] [LocalContainerEntityManagerFactoryBean:651] - Closing JPA EntityManagerFactory for persistence unit 'default'
+INFO  23-04-28 10:41:55[SpringApplicationShutdownHook] [HikariDataSource:350] - HikariPool-1 - Shutdown initiated...
+INFO  23-04-28 10:41:55[SpringApplicationShutdownHook] [HikariDataSource:352] - HikariPool-1 - Shutdown completed.
+INFO  23-04-28 10:41:59[main] [NotificationApplication:55] - Starting NotificationApplication using Java 1.8.0_291 on bag-yong-ug-ui-MacBookPro-3.local with PID 85672 (/Users/ukpark/Downloads/notification/target/classes started by ukpark in /Users/ukpark/Downloads/notification)
+INFO  23-04-28 10:41:59[main] [NotificationApplication:631] - No active profile set, falling back to 1 default profile: "default"
+INFO  23-04-28 10:41:59[main] [RepositoryConfigurationDelegate:132] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+INFO  23-04-28 10:41:59[main] [RepositoryConfigurationDelegate:201] - Finished Spring Data repository scanning in 27 ms. Found 1 JPA repository interfaces.
+INFO  23-04-28 10:41:59[main] [TomcatWebServer:108] - Tomcat initialized with port(s): 20092 (http)
+INFO  23-04-28 10:41:59[main] [Http11NioProtocol:173] - Initializing ProtocolHandler ["http-nio-20092"]
+INFO  23-04-28 10:41:59[main] [StandardService:173] - Starting service [Tomcat]
+INFO  23-04-28 10:41:59[main] [StandardEngine:173] - Starting Servlet engine: [Apache Tomcat/9.0.74]
+INFO  23-04-28 10:42:00[main] [[/]:173] - Initializing Spring embedded WebApplicationContext
+INFO  23-04-28 10:42:00[main] [ServletWebServerApplicationContext:292] - Root WebApplicationContext: initialization completed in 911 ms
+INFO  23-04-28 10:42:00[main] [LogHelper:31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+INFO  23-04-28 10:42:00[main] [Version:44] - HHH000412: Hibernate ORM core version 5.6.15.Final
+INFO  23-04-28 10:42:00[main] [Version:56] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+INFO  23-04-28 10:42:00[main] [HikariDataSource:110] - HikariPool-1 - Starting...
+INFO  23-04-28 10:42:01[main] [HikariDataSource:123] - HikariPool-1 - Start completed.
+INFO  23-04-28 10:42:01[main] [Dialect:175] - HHH000400: Using dialect: org.hibernate.dialect.MariaDB106Dialect
+INFO  23-04-28 10:42:01[main] [JtaPlatformInitiator:52] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+INFO  23-04-28 10:42:01[main] [LocalContainerEntityManagerFactoryBean:437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+WARN  23-04-28 10:42:02[main] [JpaBaseConfiguration$JpaWebConfiguration:223] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+INFO  23-04-28 10:42:02[main] [Http11NioProtocol:173] - Starting ProtocolHandler ["http-nio-20092"]
+INFO  23-04-28 10:42:02[main] [TomcatWebServer:220] - Tomcat started on port(s): 20092 (http) with context path ''
+INFO  23-04-28 10:42:02[main] [NotificationApplication:61] - Started NotificationApplication in 3.586 seconds (JVM running for 4.136)
+INFO  23-04-28 10:42:04[http-nio-20092-exec-1] [[/]:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO  23-04-28 10:42:04[http-nio-20092-exec-1] [DispatcherServlet:525] - Initializing Servlet 'dispatcherServlet'
+INFO  23-04-28 10:42:04[http-nio-20092-exec-1] [DispatcherServlet:547] - Completed initialization in 1 ms
+ERROR 23-04-28 10:42:06[http-nio-20092-exec-1] [PushService:80] - Failed to send push notification: d61a2ed3980ad7c8
+com.google.firebase.messaging.FirebaseMessagingException: The registration token is not a valid FCM registration token
+	at com.google.firebase.messaging.FirebaseMessagingClientImpl.newException(FirebaseMessagingClientImpl.java:306)
+	at com.google.firebase.messaging.FirebaseMessagingClientImpl.createExceptionFromResponse(FirebaseMessagingClientImpl.java:211)
+	at com.google.firebase.messaging.FirebaseMessagingClientImpl.send(FirebaseMessagingClientImpl.java:127)
+	at com.google.firebase.messaging.FirebaseMessaging$1.execute(FirebaseMessaging.java:139)
+	at com.google.firebase.messaging.FirebaseMessaging$1.execute(FirebaseMessaging.java:136)
+	at com.google.firebase.internal.CallableOperation.call(CallableOperation.java:36)
+	at com.google.firebase.messaging.FirebaseMessaging.send(FirebaseMessaging.java:106)
+	at com.google.firebase.messaging.FirebaseMessaging.send(FirebaseMessaging.java:90)
+	at com.hni.notification.push.PushService.sendMessage(PushService.java:68)
+	at com.hni.notification.push.PushService.sendPushServer(PushService.java:28)
+	at com.hni.notification.push.PushController.SendNotificationForJson(PushController.java:27)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: com.google.api.client.http.HttpResponseException: 400 Bad Request
+{
+  "error": {
+    "code": 400,
+    "message": "The registration token is not a valid FCM registration token",
+    "status": "INVALID_ARGUMENT",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.firebase.fcm.v1.FcmError",
+        "errorCode": "INVALID_ARGUMENT"
+      }
+    ]
+  }
+}
+
+	at com.google.api.client.http.HttpRequest.execute(HttpRequest.java:1072)
+	at com.google.firebase.messaging.FirebaseMessagingClientImpl.sendSingleRequest(FirebaseMessagingClientImpl.java:153)
+	at com.google.firebase.messaging.FirebaseMessagingClientImpl.send(FirebaseMessagingClientImpl.java:125)
+	... 58 common frames omitted
+ERROR 23-04-28 10:42:06[http-nio-20092-exec-1] [PushService:81] - Failed to send push notification token: ffn46IMtQtuBCFMUsbEEUh%3AAPA91bHvpj9w0bQ0EMujUiL0cEUXH2UJ7CUSqmNc8BXuQgL7u-JfxySIDE3EoLhd6NYckYzcWu5rozFWW_6LXzpqmekV0KmC2ImjvPrJp6pgM8TGYdwO5Vt-L3Bbsr9D_8W4xzBsKJzP
+com.google.firebase.messaging.FirebaseMessagingException: The registration token is not a valid FCM registration token
+	at com.google.firebase.messaging.FirebaseMessagingClientImpl.newException(FirebaseMessagingClientImpl.java:306)
+	at com.google.firebase.messaging.FirebaseMessagingClientImpl.createExceptionFromResponse(FirebaseMessagingClientImpl.java:211)
+	at com.google.firebase.messaging.FirebaseMessagingClientImpl.send(FirebaseMessagingClientImpl.java:127)
+	at com.google.firebase.messaging.FirebaseMessaging$1.execute(FirebaseMessaging.java:139)
+	at com.google.firebase.messaging.FirebaseMessaging$1.execute(FirebaseMessaging.java:136)
+	at com.google.firebase.internal.CallableOperation.call(CallableOperation.java:36)
+	at com.google.firebase.messaging.FirebaseMessaging.send(FirebaseMessaging.java:106)
+	at com.google.firebase.messaging.FirebaseMessaging.send(FirebaseMessaging.java:90)
+	at com.hni.notification.push.PushService.sendMessage(PushService.java:68)
+	at com.hni.notification.push.PushService.sendPushServer(PushService.java:28)
+	at com.hni.notification.push.PushController.SendNotificationForJson(PushController.java:27)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: com.google.api.client.http.HttpResponseException: 400 Bad Request
+{
+  "error": {
+    "code": 400,
+    "message": "The registration token is not a valid FCM registration token",
+    "status": "INVALID_ARGUMENT",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.firebase.fcm.v1.FcmError",
+        "errorCode": "INVALID_ARGUMENT"
+      }
+    ]
+  }
+}
+
+	at com.google.api.client.http.HttpRequest.execute(HttpRequest.java:1072)
+	at com.google.firebase.messaging.FirebaseMessagingClientImpl.sendSingleRequest(FirebaseMessagingClientImpl.java:153)
+	at com.google.firebase.messaging.FirebaseMessagingClientImpl.send(FirebaseMessagingClientImpl.java:125)
+	... 58 common frames omitted
+INFO  23-04-28 10:42:34[SpringApplicationShutdownHook] [LocalContainerEntityManagerFactoryBean:651] - Closing JPA EntityManagerFactory for persistence unit 'default'
+INFO  23-04-28 10:42:34[SpringApplicationShutdownHook] [HikariDataSource:350] - HikariPool-1 - Shutdown initiated...
+INFO  23-04-28 10:42:34[SpringApplicationShutdownHook] [HikariDataSource:352] - HikariPool-1 - Shutdown completed.
+INFO  23-04-28 10:42:37[main] [NotificationApplication:55] - Starting NotificationApplication using Java 1.8.0_291 on bag-yong-ug-ui-MacBookPro-3.local with PID 85751 (/Users/ukpark/Downloads/notification/target/classes started by ukpark in /Users/ukpark/Downloads/notification)
+INFO  23-04-28 10:42:37[main] [NotificationApplication:631] - No active profile set, falling back to 1 default profile: "default"
+INFO  23-04-28 10:42:38[main] [RepositoryConfigurationDelegate:132] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+INFO  23-04-28 10:42:38[main] [RepositoryConfigurationDelegate:201] - Finished Spring Data repository scanning in 27 ms. Found 1 JPA repository interfaces.
+INFO  23-04-28 10:42:38[main] [TomcatWebServer:108] - Tomcat initialized with port(s): 20092 (http)
+INFO  23-04-28 10:42:38[main] [Http11NioProtocol:173] - Initializing ProtocolHandler ["http-nio-20092"]
+INFO  23-04-28 10:42:38[main] [StandardService:173] - Starting service [Tomcat]
+INFO  23-04-28 10:42:38[main] [StandardEngine:173] - Starting Servlet engine: [Apache Tomcat/9.0.74]
+INFO  23-04-28 10:42:38[main] [[/]:173] - Initializing Spring embedded WebApplicationContext
+INFO  23-04-28 10:42:38[main] [ServletWebServerApplicationContext:292] - Root WebApplicationContext: initialization completed in 934 ms
+INFO  23-04-28 10:42:38[main] [LogHelper:31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+INFO  23-04-28 10:42:38[main] [Version:44] - HHH000412: Hibernate ORM core version 5.6.15.Final
+INFO  23-04-28 10:42:39[main] [Version:56] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+INFO  23-04-28 10:42:39[main] [HikariDataSource:110] - HikariPool-1 - Starting...
+INFO  23-04-28 10:42:39[main] [HikariDataSource:123] - HikariPool-1 - Start completed.
+INFO  23-04-28 10:42:39[main] [Dialect:175] - HHH000400: Using dialect: org.hibernate.dialect.MariaDB106Dialect
+INFO  23-04-28 10:42:39[main] [JtaPlatformInitiator:52] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+INFO  23-04-28 10:42:39[main] [LocalContainerEntityManagerFactoryBean:437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+WARN  23-04-28 10:42:39[main] [JpaBaseConfiguration$JpaWebConfiguration:223] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+INFO  23-04-28 10:42:40[main] [Http11NioProtocol:173] - Starting ProtocolHandler ["http-nio-20092"]
+INFO  23-04-28 10:42:40[main] [TomcatWebServer:220] - Tomcat started on port(s): 20092 (http) with context path ''
+INFO  23-04-28 10:42:40[main] [NotificationApplication:61] - Started NotificationApplication in 2.665 seconds (JVM running for 3.163)
+INFO  23-04-28 10:42:42[http-nio-20092-exec-1] [[/]:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO  23-04-28 10:42:42[http-nio-20092-exec-1] [DispatcherServlet:525] - Initializing Servlet 'dispatcherServlet'
+INFO  23-04-28 10:42:42[http-nio-20092-exec-1] [DispatcherServlet:547] - Completed initialization in 1 ms
+ERROR 23-04-28 10:42:43[http-nio-20092-exec-1] [PushService:81] - Failed to send push notification: d61a2ed3980ad7c8
+com.google.firebase.messaging.FirebaseMessagingException: The registration token is not a valid FCM registration token
+	at com.google.firebase.messaging.FirebaseMessagingClientImpl.newException(FirebaseMessagingClientImpl.java:306)
+	at com.google.firebase.messaging.FirebaseMessagingClientImpl.createExceptionFromResponse(FirebaseMessagingClientImpl.java:211)
+	at com.google.firebase.messaging.FirebaseMessagingClientImpl.send(FirebaseMessagingClientImpl.java:127)
+	at com.google.firebase.messaging.FirebaseMessaging$1.execute(FirebaseMessaging.java:139)
+	at com.google.firebase.messaging.FirebaseMessaging$1.execute(FirebaseMessaging.java:136)
+	at com.google.firebase.internal.CallableOperation.call(CallableOperation.java:36)
+	at com.google.firebase.messaging.FirebaseMessaging.send(FirebaseMessaging.java:106)
+	at com.google.firebase.messaging.FirebaseMessaging.send(FirebaseMessaging.java:90)
+	at com.hni.notification.push.PushService.sendMessage(PushService.java:69)
+	at com.hni.notification.push.PushService.sendPushServer(PushService.java:29)
+	at com.hni.notification.push.PushController.SendNotificationForJson(PushController.java:27)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: com.google.api.client.http.HttpResponseException: 400 Bad Request
+{
+  "error": {
+    "code": 400,
+    "message": "The registration token is not a valid FCM registration token",
+    "status": "INVALID_ARGUMENT",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.firebase.fcm.v1.FcmError",
+        "errorCode": "INVALID_ARGUMENT"
+      }
+    ]
+  }
+}
+
+	at com.google.api.client.http.HttpRequest.execute(HttpRequest.java:1072)
+	at com.google.firebase.messaging.FirebaseMessagingClientImpl.sendSingleRequest(FirebaseMessagingClientImpl.java:153)
+	at com.google.firebase.messaging.FirebaseMessagingClientImpl.send(FirebaseMessagingClientImpl.java:125)
+	... 58 common frames omitted
+ERROR 23-04-28 10:42:43[http-nio-20092-exec-1] [PushService:82] - Failed to send push notification token: ffn46IMtQtuBCFMUsbEEUh%3AAPA91bHvpj9w0bQ0EMujUiL0cEUXH2UJ7CUSqmNc8BXuQgL7u-JfxySIDE3EoLhd6NYckYzcWu5rozFWW_6LXzpqmekV0KmC2ImjvPrJp6pgM8TGYdwO5Vt-L3Bbsr9D_8W4xzBsKJzP
+com.google.firebase.messaging.FirebaseMessagingException: The registration token is not a valid FCM registration token
+	at com.google.firebase.messaging.FirebaseMessagingClientImpl.newException(FirebaseMessagingClientImpl.java:306)
+	at com.google.firebase.messaging.FirebaseMessagingClientImpl.createExceptionFromResponse(FirebaseMessagingClientImpl.java:211)
+	at com.google.firebase.messaging.FirebaseMessagingClientImpl.send(FirebaseMessagingClientImpl.java:127)
+	at com.google.firebase.messaging.FirebaseMessaging$1.execute(FirebaseMessaging.java:139)
+	at com.google.firebase.messaging.FirebaseMessaging$1.execute(FirebaseMessaging.java:136)
+	at com.google.firebase.internal.CallableOperation.call(CallableOperation.java:36)
+	at com.google.firebase.messaging.FirebaseMessaging.send(FirebaseMessaging.java:106)
+	at com.google.firebase.messaging.FirebaseMessaging.send(FirebaseMessaging.java:90)
+	at com.hni.notification.push.PushService.sendMessage(PushService.java:69)
+	at com.hni.notification.push.PushService.sendPushServer(PushService.java:29)
+	at com.hni.notification.push.PushController.SendNotificationForJson(PushController.java:27)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: com.google.api.client.http.HttpResponseException: 400 Bad Request
+{
+  "error": {
+    "code": 400,
+    "message": "The registration token is not a valid FCM registration token",
+    "status": "INVALID_ARGUMENT",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.firebase.fcm.v1.FcmError",
+        "errorCode": "INVALID_ARGUMENT"
+      }
+    ]
+  }
+}
+
+	at com.google.api.client.http.HttpRequest.execute(HttpRequest.java:1072)
+	at com.google.firebase.messaging.FirebaseMessagingClientImpl.sendSingleRequest(FirebaseMessagingClientImpl.java:153)
+	at com.google.firebase.messaging.FirebaseMessagingClientImpl.send(FirebaseMessagingClientImpl.java:125)
+	... 58 common frames omitted
+INFO  23-04-28 10:43:50[SpringApplicationShutdownHook] [LocalContainerEntityManagerFactoryBean:651] - Closing JPA EntityManagerFactory for persistence unit 'default'
+INFO  23-04-28 10:43:50[SpringApplicationShutdownHook] [HikariDataSource:350] - HikariPool-1 - Shutdown initiated...
+INFO  23-04-28 10:43:50[SpringApplicationShutdownHook] [HikariDataSource:352] - HikariPool-1 - Shutdown completed.
+INFO  23-04-28 10:43:53[main] [NotificationApplication:55] - Starting NotificationApplication using Java 1.8.0_291 on bag-yong-ug-ui-MacBookPro-3.local with PID 85904 (/Users/ukpark/Downloads/notification/target/classes started by ukpark in /Users/ukpark/Downloads/notification)
+INFO  23-04-28 10:43:53[main] [NotificationApplication:631] - No active profile set, falling back to 1 default profile: "default"
+INFO  23-04-28 10:43:54[main] [RepositoryConfigurationDelegate:132] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+INFO  23-04-28 10:43:54[main] [RepositoryConfigurationDelegate:201] - Finished Spring Data repository scanning in 32 ms. Found 1 JPA repository interfaces.
+INFO  23-04-28 10:43:54[main] [TomcatWebServer:108] - Tomcat initialized with port(s): 20092 (http)
+INFO  23-04-28 10:43:54[main] [Http11NioProtocol:173] - Initializing ProtocolHandler ["http-nio-20092"]
+INFO  23-04-28 10:43:54[main] [StandardService:173] - Starting service [Tomcat]
+INFO  23-04-28 10:43:54[main] [StandardEngine:173] - Starting Servlet engine: [Apache Tomcat/9.0.74]
+INFO  23-04-28 10:43:54[main] [[/]:173] - Initializing Spring embedded WebApplicationContext
+INFO  23-04-28 10:43:54[main] [ServletWebServerApplicationContext:292] - Root WebApplicationContext: initialization completed in 868 ms
+INFO  23-04-28 10:43:54[main] [LogHelper:31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+INFO  23-04-28 10:43:54[main] [Version:44] - HHH000412: Hibernate ORM core version 5.6.15.Final
+INFO  23-04-28 10:43:55[main] [Version:56] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+INFO  23-04-28 10:43:55[main] [HikariDataSource:110] - HikariPool-1 - Starting...
+INFO  23-04-28 10:43:55[main] [HikariDataSource:123] - HikariPool-1 - Start completed.
+INFO  23-04-28 10:43:55[main] [Dialect:175] - HHH000400: Using dialect: org.hibernate.dialect.MariaDB106Dialect
+INFO  23-04-28 10:43:55[main] [JtaPlatformInitiator:52] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+INFO  23-04-28 10:43:55[main] [LocalContainerEntityManagerFactoryBean:437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+WARN  23-04-28 10:43:55[main] [JpaBaseConfiguration$JpaWebConfiguration:223] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+INFO  23-04-28 10:43:56[main] [Http11NioProtocol:173] - Starting ProtocolHandler ["http-nio-20092"]
+INFO  23-04-28 10:43:56[main] [TomcatWebServer:220] - Tomcat started on port(s): 20092 (http) with context path ''
+INFO  23-04-28 10:43:56[main] [NotificationApplication:61] - Started NotificationApplication in 2.503 seconds (JVM running for 2.999)
+INFO  23-04-28 10:43:59[http-nio-20092-exec-2] [[/]:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO  23-04-28 10:43:59[http-nio-20092-exec-2] [DispatcherServlet:525] - Initializing Servlet 'dispatcherServlet'
+INFO  23-04-28 10:43:59[http-nio-20092-exec-2] [DispatcherServlet:547] - Completed initialization in 1 ms
+INFO  23-04-28 10:44:00[http-nio-20092-exec-2] [PushService:73] - success message sending | asdf | projects/sokcho-dev-b68a6/messages/0:1682646240568644%8afdf08b8afdf08b
+ERROR 23-04-28 10:44:14[http-nio-20092-exec-3] [PushService:80] - Failed to send push notification: d61a2ed3980ad7c8
+com.google.firebase.messaging.FirebaseMessagingException: The registration token is not a valid FCM registration token
+	at com.google.firebase.messaging.FirebaseMessagingClientImpl.newException(FirebaseMessagingClientImpl.java:306)
+	at com.google.firebase.messaging.FirebaseMessagingClientImpl.createExceptionFromResponse(FirebaseMessagingClientImpl.java:211)
+	at com.google.firebase.messaging.FirebaseMessagingClientImpl.send(FirebaseMessagingClientImpl.java:127)
+	at com.google.firebase.messaging.FirebaseMessaging$1.execute(FirebaseMessaging.java:139)
+	at com.google.firebase.messaging.FirebaseMessaging$1.execute(FirebaseMessaging.java:136)
+	at com.google.firebase.internal.CallableOperation.call(CallableOperation.java:36)
+	at com.google.firebase.messaging.FirebaseMessaging.send(FirebaseMessaging.java:106)
+	at com.google.firebase.messaging.FirebaseMessaging.send(FirebaseMessaging.java:90)
+	at com.hni.notification.push.PushService.sendMessage(PushService.java:68)
+	at com.hni.notification.push.PushService.sendPushServer(PushService.java:28)
+	at com.hni.notification.push.PushController.SendNotificationForJson(PushController.java:27)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: com.google.api.client.http.HttpResponseException: 400 Bad Request
+{
+  "error": {
+    "code": 400,
+    "message": "The registration token is not a valid FCM registration token",
+    "status": "INVALID_ARGUMENT",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.firebase.fcm.v1.FcmError",
+        "errorCode": "INVALID_ARGUMENT"
+      }
+    ]
+  }
+}
+
+	at com.google.api.client.http.HttpRequest.execute(HttpRequest.java:1072)
+	at com.google.firebase.messaging.FirebaseMessagingClientImpl.sendSingleRequest(FirebaseMessagingClientImpl.java:153)
+	at com.google.firebase.messaging.FirebaseMessagingClientImpl.send(FirebaseMessagingClientImpl.java:125)
+	... 58 common frames omitted
+ERROR 23-04-28 10:44:14[http-nio-20092-exec-3] [PushService:81] - Failed to send push notification token: ffn46IMtQtuBCFMUsbEEUh%3AAPA91bHvpj9w0bQ0EMujUiL0cEUXH2UJ7CUSqmNc8BXuQgL7u-JfxySIDE3EoLhd6NYckYzcWu5rozFWW_6LXzpqmekV0KmC2ImjvPrJp6pgM8TGYdwO5Vt-L3Bbsr9D_8W4xzBsKJzP
+com.google.firebase.messaging.FirebaseMessagingException: The registration token is not a valid FCM registration token
+	at com.google.firebase.messaging.FirebaseMessagingClientImpl.newException(FirebaseMessagingClientImpl.java:306)
+	at com.google.firebase.messaging.FirebaseMessagingClientImpl.createExceptionFromResponse(FirebaseMessagingClientImpl.java:211)
+	at com.google.firebase.messaging.FirebaseMessagingClientImpl.send(FirebaseMessagingClientImpl.java:127)
+	at com.google.firebase.messaging.FirebaseMessaging$1.execute(FirebaseMessaging.java:139)
+	at com.google.firebase.messaging.FirebaseMessaging$1.execute(FirebaseMessaging.java:136)
+	at com.google.firebase.internal.CallableOperation.call(CallableOperation.java:36)
+	at com.google.firebase.messaging.FirebaseMessaging.send(FirebaseMessaging.java:106)
+	at com.google.firebase.messaging.FirebaseMessaging.send(FirebaseMessaging.java:90)
+	at com.hni.notification.push.PushService.sendMessage(PushService.java:68)
+	at com.hni.notification.push.PushService.sendPushServer(PushService.java:28)
+	at com.hni.notification.push.PushController.SendNotificationForJson(PushController.java:27)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: com.google.api.client.http.HttpResponseException: 400 Bad Request
+{
+  "error": {
+    "code": 400,
+    "message": "The registration token is not a valid FCM registration token",
+    "status": "INVALID_ARGUMENT",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.firebase.fcm.v1.FcmError",
+        "errorCode": "INVALID_ARGUMENT"
+      }
+    ]
+  }
+}
+
+	at com.google.api.client.http.HttpRequest.execute(HttpRequest.java:1072)
+	at com.google.firebase.messaging.FirebaseMessagingClientImpl.sendSingleRequest(FirebaseMessagingClientImpl.java:153)
+	at com.google.firebase.messaging.FirebaseMessagingClientImpl.send(FirebaseMessagingClientImpl.java:125)
+	... 58 common frames omitted
+INFO  23-04-28 10:45:47[SpringApplicationShutdownHook] [LocalContainerEntityManagerFactoryBean:651] - Closing JPA EntityManagerFactory for persistence unit 'default'
+INFO  23-04-28 10:45:47[SpringApplicationShutdownHook] [HikariDataSource:350] - HikariPool-1 - Shutdown initiated...
+INFO  23-04-28 10:45:47[SpringApplicationShutdownHook] [HikariDataSource:352] - HikariPool-1 - Shutdown completed.
+INFO  23-04-28 10:46:41[main] [NotificationApplication:55] - Starting NotificationApplication using Java 1.8.0_291 on bag-yong-ug-ui-MacBookPro-3.local with PID 86271 (/Users/ukpark/Downloads/notification/target/classes started by ukpark in /Users/ukpark/Downloads/notification)
+INFO  23-04-28 10:46:41[main] [NotificationApplication:631] - No active profile set, falling back to 1 default profile: "default"
+INFO  23-04-28 10:46:41[main] [RepositoryConfigurationDelegate:132] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+INFO  23-04-28 10:46:41[main] [RepositoryConfigurationDelegate:201] - Finished Spring Data repository scanning in 32 ms. Found 1 JPA repository interfaces.
+INFO  23-04-28 10:46:41[main] [TomcatWebServer:108] - Tomcat initialized with port(s): 20092 (http)
+INFO  23-04-28 10:46:41[main] [Http11NioProtocol:173] - Initializing ProtocolHandler ["http-nio-20092"]
+INFO  23-04-28 10:46:41[main] [StandardService:173] - Starting service [Tomcat]
+INFO  23-04-28 10:46:41[main] [StandardEngine:173] - Starting Servlet engine: [Apache Tomcat/9.0.74]
+INFO  23-04-28 10:46:42[main] [[/]:173] - Initializing Spring embedded WebApplicationContext
+INFO  23-04-28 10:46:42[main] [ServletWebServerApplicationContext:292] - Root WebApplicationContext: initialization completed in 944 ms
+INFO  23-04-28 10:46:42[main] [LogHelper:31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+INFO  23-04-28 10:46:42[main] [Version:44] - HHH000412: Hibernate ORM core version 5.6.15.Final
+INFO  23-04-28 10:46:42[main] [Version:56] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+INFO  23-04-28 10:46:42[main] [HikariDataSource:110] - HikariPool-1 - Starting...
+INFO  23-04-28 10:46:42[main] [HikariDataSource:123] - HikariPool-1 - Start completed.
+INFO  23-04-28 10:46:42[main] [Dialect:175] - HHH000400: Using dialect: org.hibernate.dialect.MariaDB106Dialect
+INFO  23-04-28 10:46:42[main] [JtaPlatformInitiator:52] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+INFO  23-04-28 10:46:43[main] [LocalContainerEntityManagerFactoryBean:437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+WARN  23-04-28 10:46:43[main] [JpaBaseConfiguration$JpaWebConfiguration:223] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+INFO  23-04-28 10:46:43[main] [Http11NioProtocol:173] - Starting ProtocolHandler ["http-nio-20092"]
+INFO  23-04-28 10:46:43[main] [TomcatWebServer:220] - Tomcat started on port(s): 20092 (http) with context path ''
+INFO  23-04-28 10:46:43[main] [NotificationApplication:61] - Started NotificationApplication in 2.813 seconds (JVM running for 3.35)
+INFO  23-04-28 10:47:17[SpringApplicationShutdownHook] [LocalContainerEntityManagerFactoryBean:651] - Closing JPA EntityManagerFactory for persistence unit 'default'
+INFO  23-04-28 10:47:17[SpringApplicationShutdownHook] [HikariDataSource:350] - HikariPool-1 - Shutdown initiated...
+INFO  23-04-28 10:47:17[SpringApplicationShutdownHook] [HikariDataSource:352] - HikariPool-1 - Shutdown completed.
+INFO  23-04-28 10:47:20[main] [NotificationApplication:55] - Starting NotificationApplication using Java 1.8.0_291 on bag-yong-ug-ui-MacBookPro-3.local with PID 86359 (/Users/ukpark/Downloads/notification/target/classes started by ukpark in /Users/ukpark/Downloads/notification)
+INFO  23-04-28 10:47:20[main] [NotificationApplication:631] - No active profile set, falling back to 1 default profile: "default"
+INFO  23-04-28 10:47:20[main] [RepositoryConfigurationDelegate:132] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+INFO  23-04-28 10:47:20[main] [RepositoryConfigurationDelegate:201] - Finished Spring Data repository scanning in 26 ms. Found 1 JPA repository interfaces.
+INFO  23-04-28 10:47:21[main] [TomcatWebServer:108] - Tomcat initialized with port(s): 20092 (http)
+INFO  23-04-28 10:47:21[main] [Http11NioProtocol:173] - Initializing ProtocolHandler ["http-nio-20092"]
+INFO  23-04-28 10:47:21[main] [StandardService:173] - Starting service [Tomcat]
+INFO  23-04-28 10:47:21[main] [StandardEngine:173] - Starting Servlet engine: [Apache Tomcat/9.0.74]
+INFO  23-04-28 10:47:21[main] [[/]:173] - Initializing Spring embedded WebApplicationContext
+INFO  23-04-28 10:47:21[main] [ServletWebServerApplicationContext:292] - Root WebApplicationContext: initialization completed in 850 ms
+INFO  23-04-28 10:47:21[main] [LogHelper:31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+INFO  23-04-28 10:47:21[main] [Version:44] - HHH000412: Hibernate ORM core version 5.6.15.Final
+INFO  23-04-28 10:47:21[main] [Version:56] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+INFO  23-04-28 10:47:21[main] [HikariDataSource:110] - HikariPool-1 - Starting...
+INFO  23-04-28 10:47:21[main] [HikariDataSource:123] - HikariPool-1 - Start completed.
+INFO  23-04-28 10:47:21[main] [Dialect:175] - HHH000400: Using dialect: org.hibernate.dialect.MariaDB106Dialect
+INFO  23-04-28 10:47:22[main] [JtaPlatformInitiator:52] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+INFO  23-04-28 10:47:22[main] [LocalContainerEntityManagerFactoryBean:437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+WARN  23-04-28 10:47:22[main] [JpaBaseConfiguration$JpaWebConfiguration:223] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+INFO  23-04-28 10:47:22[main] [Http11NioProtocol:173] - Starting ProtocolHandler ["http-nio-20092"]
+INFO  23-04-28 10:47:22[main] [TomcatWebServer:220] - Tomcat started on port(s): 20092 (http) with context path ''
+INFO  23-04-28 10:47:22[main] [NotificationApplication:61] - Started NotificationApplication in 2.539 seconds (JVM running for 3.034)
+INFO  23-04-28 10:47:26[http-nio-20092-exec-1] [[/]:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO  23-04-28 10:47:26[http-nio-20092-exec-1] [DispatcherServlet:525] - Initializing Servlet 'dispatcherServlet'
+INFO  23-04-28 10:47:26[http-nio-20092-exec-1] [DispatcherServlet:547] - Completed initialization in 1 ms
+ERROR 23-04-28 10:47:27[http-nio-20092-exec-1] [PushService:81] - Failed to send push notification: d61a2ed3980ad7c8
+com.google.firebase.messaging.FirebaseMessagingException: The registration token is not a valid FCM registration token
+	at com.google.firebase.messaging.FirebaseMessagingClientImpl.newException(FirebaseMessagingClientImpl.java:306)
+	at com.google.firebase.messaging.FirebaseMessagingClientImpl.createExceptionFromResponse(FirebaseMessagingClientImpl.java:211)
+	at com.google.firebase.messaging.FirebaseMessagingClientImpl.send(FirebaseMessagingClientImpl.java:127)
+	at com.google.firebase.messaging.FirebaseMessaging$1.execute(FirebaseMessaging.java:139)
+	at com.google.firebase.messaging.FirebaseMessaging$1.execute(FirebaseMessaging.java:136)
+	at com.google.firebase.internal.CallableOperation.call(CallableOperation.java:36)
+	at com.google.firebase.messaging.FirebaseMessaging.send(FirebaseMessaging.java:106)
+	at com.google.firebase.messaging.FirebaseMessaging.send(FirebaseMessaging.java:90)
+	at com.hni.notification.push.PushService.sendMessage(PushService.java:69)
+	at com.hni.notification.push.PushService.sendPushServer(PushService.java:29)
+	at com.hni.notification.push.PushController.SendNotificationForJson(PushController.java:27)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: com.google.api.client.http.HttpResponseException: 400 Bad Request
+{
+  "error": {
+    "code": 400,
+    "message": "The registration token is not a valid FCM registration token",
+    "status": "INVALID_ARGUMENT",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.firebase.fcm.v1.FcmError",
+        "errorCode": "INVALID_ARGUMENT"
+      }
+    ]
+  }
+}
+
+	at com.google.api.client.http.HttpRequest.execute(HttpRequest.java:1072)
+	at com.google.firebase.messaging.FirebaseMessagingClientImpl.sendSingleRequest(FirebaseMessagingClientImpl.java:153)
+	at com.google.firebase.messaging.FirebaseMessagingClientImpl.send(FirebaseMessagingClientImpl.java:125)
+	... 58 common frames omitted
+ERROR 23-04-28 10:47:27[http-nio-20092-exec-1] [PushService:82] - Failed to send push notification token: ffn46IMtQtuBCFMUsbEEUh%3AAPA91bHvpj9w0bQ0EMujUiL0cEUXH2UJ7CUSqmNc8BXuQgL7u-JfxySIDE3EoLhd6NYckYzcWu5rozFWW_6LXzpqmekV0KmC2ImjvPrJp6pgM8TGYdwO5Vt-L3Bbsr9D_8W4xzBsKJzP
+com.google.firebase.messaging.FirebaseMessagingException: The registration token is not a valid FCM registration token
+	at com.google.firebase.messaging.FirebaseMessagingClientImpl.newException(FirebaseMessagingClientImpl.java:306)
+	at com.google.firebase.messaging.FirebaseMessagingClientImpl.createExceptionFromResponse(FirebaseMessagingClientImpl.java:211)
+	at com.google.firebase.messaging.FirebaseMessagingClientImpl.send(FirebaseMessagingClientImpl.java:127)
+	at com.google.firebase.messaging.FirebaseMessaging$1.execute(FirebaseMessaging.java:139)
+	at com.google.firebase.messaging.FirebaseMessaging$1.execute(FirebaseMessaging.java:136)
+	at com.google.firebase.internal.CallableOperation.call(CallableOperation.java:36)
+	at com.google.firebase.messaging.FirebaseMessaging.send(FirebaseMessaging.java:106)
+	at com.google.firebase.messaging.FirebaseMessaging.send(FirebaseMessaging.java:90)
+	at com.hni.notification.push.PushService.sendMessage(PushService.java:69)
+	at com.hni.notification.push.PushService.sendPushServer(PushService.java:29)
+	at com.hni.notification.push.PushController.SendNotificationForJson(PushController.java:27)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: com.google.api.client.http.HttpResponseException: 400 Bad Request
+{
+  "error": {
+    "code": 400,
+    "message": "The registration token is not a valid FCM registration token",
+    "status": "INVALID_ARGUMENT",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.firebase.fcm.v1.FcmError",
+        "errorCode": "INVALID_ARGUMENT"
+      }
+    ]
+  }
+}
+
+	at com.google.api.client.http.HttpRequest.execute(HttpRequest.java:1072)
+	at com.google.firebase.messaging.FirebaseMessagingClientImpl.sendSingleRequest(FirebaseMessagingClientImpl.java:153)
+	at com.google.firebase.messaging.FirebaseMessagingClientImpl.send(FirebaseMessagingClientImpl.java:125)
+	... 58 common frames omitted
+ERROR 23-04-28 10:52:09[http-nio-20092-exec-3] [PushService:81] - Failed to send push notification: d61a2ed3980ad7c8
+com.google.firebase.messaging.FirebaseMessagingException: The registration token is not a valid FCM registration token
+	at com.google.firebase.messaging.FirebaseMessagingClientImpl.newException(FirebaseMessagingClientImpl.java:306)
+	at com.google.firebase.messaging.FirebaseMessagingClientImpl.createExceptionFromResponse(FirebaseMessagingClientImpl.java:211)
+	at com.google.firebase.messaging.FirebaseMessagingClientImpl.send(FirebaseMessagingClientImpl.java:127)
+	at com.google.firebase.messaging.FirebaseMessaging$1.execute(FirebaseMessaging.java:139)
+	at com.google.firebase.messaging.FirebaseMessaging$1.execute(FirebaseMessaging.java:136)
+	at com.google.firebase.internal.CallableOperation.call(CallableOperation.java:36)
+	at com.google.firebase.messaging.FirebaseMessaging.send(FirebaseMessaging.java:106)
+	at com.google.firebase.messaging.FirebaseMessaging.send(FirebaseMessaging.java:90)
+	at com.hni.notification.push.PushService.sendMessage(PushService.java:69)
+	at com.hni.notification.push.PushService.sendPushServer(PushService.java:29)
+	at com.hni.notification.push.PushController.SendNotificationForJson(PushController.java:27)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: com.google.api.client.http.HttpResponseException: 400 Bad Request
+{
+  "error": {
+    "code": 400,
+    "message": "The registration token is not a valid FCM registration token",
+    "status": "INVALID_ARGUMENT",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.firebase.fcm.v1.FcmError",
+        "errorCode": "INVALID_ARGUMENT"
+      }
+    ]
+  }
+}
+
+	at com.google.api.client.http.HttpRequest.execute(HttpRequest.java:1072)
+	at com.google.firebase.messaging.FirebaseMessagingClientImpl.sendSingleRequest(FirebaseMessagingClientImpl.java:153)
+	at com.google.firebase.messaging.FirebaseMessagingClientImpl.send(FirebaseMessagingClientImpl.java:125)
+	... 58 common frames omitted
+ERROR 23-04-28 10:52:09[http-nio-20092-exec-3] [PushService:82] - Failed to send push notification token: ffn46IMtQtuBCFMUsbEEUh%3AAPA91bHvpj9w0bQ0EMujUiL0cEUXH2UJ7CUSqmNc8BXuQgL7u-JfxySIDE3EoLhd6NYckYzcWu5rozFWW_6LXzpqmekV0KmC2ImjvPrJp6pgM8TGYdwO5Vt-L3Bbsr9D_8W4xzBsKJzP
+com.google.firebase.messaging.FirebaseMessagingException: The registration token is not a valid FCM registration token
+	at com.google.firebase.messaging.FirebaseMessagingClientImpl.newException(FirebaseMessagingClientImpl.java:306)
+	at com.google.firebase.messaging.FirebaseMessagingClientImpl.createExceptionFromResponse(FirebaseMessagingClientImpl.java:211)
+	at com.google.firebase.messaging.FirebaseMessagingClientImpl.send(FirebaseMessagingClientImpl.java:127)
+	at com.google.firebase.messaging.FirebaseMessaging$1.execute(FirebaseMessaging.java:139)
+	at com.google.firebase.messaging.FirebaseMessaging$1.execute(FirebaseMessaging.java:136)
+	at com.google.firebase.internal.CallableOperation.call(CallableOperation.java:36)
+	at com.google.firebase.messaging.FirebaseMessaging.send(FirebaseMessaging.java:106)
+	at com.google.firebase.messaging.FirebaseMessaging.send(FirebaseMessaging.java:90)
+	at com.hni.notification.push.PushService.sendMessage(PushService.java:69)
+	at com.hni.notification.push.PushService.sendPushServer(PushService.java:29)
+	at com.hni.notification.push.PushController.SendNotificationForJson(PushController.java:27)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: com.google.api.client.http.HttpResponseException: 400 Bad Request
+{
+  "error": {
+    "code": 400,
+    "message": "The registration token is not a valid FCM registration token",
+    "status": "INVALID_ARGUMENT",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.firebase.fcm.v1.FcmError",
+        "errorCode": "INVALID_ARGUMENT"
+      }
+    ]
+  }
+}
+
+	at com.google.api.client.http.HttpRequest.execute(HttpRequest.java:1072)
+	at com.google.firebase.messaging.FirebaseMessagingClientImpl.sendSingleRequest(FirebaseMessagingClientImpl.java:153)
+	at com.google.firebase.messaging.FirebaseMessagingClientImpl.send(FirebaseMessagingClientImpl.java:125)
+	... 58 common frames omitted
+INFO  23-04-28 10:56:22[http-nio-20092-exec-5] [PushService:74] - success message sending | d61a2ed3980ad7c8 | projects/sokcho-dev-b68a6/messages/0:1682646982724993%8afdf08b8afdf08b
+INFO  23-04-28 10:58:27[http-nio-20092-exec-7] [PushService:74] - success message sending | d61a2ed3980ad7c8 | projects/sokcho-dev-b68a6/messages/0:1682647107482666%8afdf08b8afdf08b
+INFO  23-04-28 11:07:12[SpringApplicationShutdownHook] [LocalContainerEntityManagerFactoryBean:651] - Closing JPA EntityManagerFactory for persistence unit 'default'
+INFO  23-04-28 11:07:12[SpringApplicationShutdownHook] [HikariDataSource:350] - HikariPool-1 - Shutdown initiated...
+INFO  23-04-28 11:07:12[SpringApplicationShutdownHook] [HikariDataSource:352] - HikariPool-1 - Shutdown completed.
+INFO  23-04-28 11:07:17[main] [NotificationApplication:55] - Starting NotificationApplication using Java 1.8.0_291 on bag-yong-ug-ui-MacBookPro-3.local with PID 89915 (/Users/ukpark/Downloads/notification/target/classes started by ukpark in /Users/ukpark/Downloads/notification)
+INFO  23-04-28 11:07:17[main] [NotificationApplication:631] - No active profile set, falling back to 1 default profile: "default"
+INFO  23-04-28 11:07:18[main] [RepositoryConfigurationDelegate:132] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+INFO  23-04-28 11:07:18[main] [RepositoryConfigurationDelegate:201] - Finished Spring Data repository scanning in 38 ms. Found 1 JPA repository interfaces.
+INFO  23-04-28 11:07:18[main] [TomcatWebServer:108] - Tomcat initialized with port(s): 20092 (http)
+INFO  23-04-28 11:07:18[main] [Http11NioProtocol:173] - Initializing ProtocolHandler ["http-nio-20092"]
+INFO  23-04-28 11:07:18[main] [StandardService:173] - Starting service [Tomcat]
+INFO  23-04-28 11:07:18[main] [StandardEngine:173] - Starting Servlet engine: [Apache Tomcat/9.0.74]
+INFO  23-04-28 11:07:18[main] [[/]:173] - Initializing Spring embedded WebApplicationContext
+INFO  23-04-28 11:07:18[main] [ServletWebServerApplicationContext:292] - Root WebApplicationContext: initialization completed in 983 ms
+INFO  23-04-28 11:07:18[main] [LogHelper:31] - HHH000204: Processing PersistenceUnitInfo [name: default]
+INFO  23-04-28 11:07:18[main] [Version:44] - HHH000412: Hibernate ORM core version 5.6.15.Final
+INFO  23-04-28 11:07:18[main] [Version:56] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+INFO  23-04-28 11:07:19[main] [HikariDataSource:110] - HikariPool-1 - Starting...
+INFO  23-04-28 11:07:19[main] [HikariDataSource:123] - HikariPool-1 - Start completed.
+INFO  23-04-28 11:07:19[main] [Dialect:175] - HHH000400: Using dialect: org.hibernate.dialect.MariaDB106Dialect
+INFO  23-04-28 11:07:19[main] [JtaPlatformInitiator:52] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+INFO  23-04-28 11:07:19[main] [LocalContainerEntityManagerFactoryBean:437] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+WARN  23-04-28 11:07:19[main] [JpaBaseConfiguration$JpaWebConfiguration:223] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+INFO  23-04-28 11:07:20[main] [Http11NioProtocol:173] - Starting ProtocolHandler ["http-nio-20092"]
+INFO  23-04-28 11:07:20[main] [TomcatWebServer:220] - Tomcat started on port(s): 20092 (http) with context path ''
+INFO  23-04-28 11:07:20[main] [NotificationApplication:61] - Started NotificationApplication in 2.889 seconds (JVM running for 3.435)
+INFO  23-04-28 11:09:15[http-nio-20092-exec-1] [[/]:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+INFO  23-04-28 11:09:15[http-nio-20092-exec-1] [DispatcherServlet:525] - Initializing Servlet 'dispatcherServlet'
+INFO  23-04-28 11:09:15[http-nio-20092-exec-1] [DispatcherServlet:547] - Completed initialization in 3 ms
+INFO  23-04-28 11:09:16[http-nio-20092-exec-1] [PushService:73] - success message sending | d61a2ed3980ad7c8 | projects/sokcho-dev-b68a6/messages/0:1682647756835646%8afdf08b8afdf08b
+WARN  23-04-28 11:21:50[http-nio-20092-exec-3] [PoolBase:184] - HikariPool-1 - Failed to validate connection org.mariadb.jdbc.MariaDbConnection@2f576c92 ((conn=551154) Connection.setNetworkTimeout cannot be called on a closed connection). Possibly consider using a shorter maxLifetime value.
+WARN  23-04-28 11:21:50[http-nio-20092-exec-3] [PoolBase:184] - HikariPool-1 - Failed to validate connection org.mariadb.jdbc.MariaDbConnection@668052b9 ((conn=551155) Connection.setNetworkTimeout cannot be called on a closed connection). Possibly consider using a shorter maxLifetime value.
+WARN  23-04-28 11:21:50[http-nio-20092-exec-3] [PoolBase:184] - HikariPool-1 - Failed to validate connection org.mariadb.jdbc.MariaDbConnection@72278107 ((conn=551156) Connection.setNetworkTimeout cannot be called on a closed connection). Possibly consider using a shorter maxLifetime value.
+WARN  23-04-28 11:21:50[http-nio-20092-exec-3] [PoolBase:184] - HikariPool-1 - Failed to validate connection org.mariadb.jdbc.MariaDbConnection@2354e453 ((conn=551157) Connection.setNetworkTimeout cannot be called on a closed connection). Possibly consider using a shorter maxLifetime value.
+WARN  23-04-28 11:21:50[http-nio-20092-exec-3] [PoolBase:184] - HikariPool-1 - Failed to validate connection org.mariadb.jdbc.MariaDbConnection@4087031b ((conn=551158) Connection.setNetworkTimeout cannot be called on a closed connection). Possibly consider using a shorter maxLifetime value.
+WARN  23-04-28 11:21:50[http-nio-20092-exec-3] [PoolBase:184] - HikariPool-1 - Failed to validate connection org.mariadb.jdbc.MariaDbConnection@24769428 ((conn=551159) Connection.setNetworkTimeout cannot be called on a closed connection). Possibly consider using a shorter maxLifetime value.
+WARN  23-04-28 11:21:50[http-nio-20092-exec-3] [PoolBase:184] - HikariPool-1 - Failed to validate connection org.mariadb.jdbc.MariaDbConnection@6a170618 ((conn=551160) Connection.setNetworkTimeout cannot be called on a closed connection). Possibly consider using a shorter maxLifetime value.
+WARN  23-04-28 11:21:50[http-nio-20092-exec-3] [PoolBase:184] - HikariPool-1 - Failed to validate connection org.mariadb.jdbc.MariaDbConnection@6ee50175 ((conn=551161) Connection.setNetworkTimeout cannot be called on a closed connection). Possibly consider using a shorter maxLifetime value.
+WARN  23-04-28 11:21:50[http-nio-20092-exec-3] [PoolBase:184] - HikariPool-1 - Failed to validate connection org.mariadb.jdbc.MariaDbConnection@16825869 ((conn=551162) Connection.setNetworkTimeout cannot be called on a closed connection). Possibly consider using a shorter maxLifetime value.
+WARN  23-04-28 11:21:50[http-nio-20092-exec-3] [PoolBase:184] - HikariPool-1 - Failed to validate connection org.mariadb.jdbc.MariaDbConnection@6c55945 ((conn=551163) Connection.setNetworkTimeout cannot be called on a closed connection). Possibly consider using a shorter maxLifetime value.
+INFO  23-04-28 11:21:52[http-nio-20092-exec-3] [PushService:73] - success message sending | d61a2ed3980ad7c8 | projects/sokcho-dev-b68a6/messages/0:1682648510616429%8afdf08b8afdf08b
+WARN  23-04-28 11:43:19[HikariPool-1 housekeeper] [HikariPool:780] - HikariPool-1 - Retrograde clock change detected (housekeeper delta=29s843ms), soft-evicting connections from pool.
