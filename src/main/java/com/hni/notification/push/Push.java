@@ -1,40 +1,24 @@
 package com.hni.notification.push;
 
-import com.hni.notification.common.BaseTimeEntity;
 import com.hni.notification.common.OsType;
-import javax.persistence.*;
 
-@Entity
-@Table(name = "SEND_HISTORY_TH")
-public class Push extends BaseTimeEntity {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class Push {
+
     private Long entityId;
-
-    @Column(nullable = false)
     private String token;
-
-    @Column(nullable = false)
     private String deviceId;
-
-    @Column(length = 50)
     private String requestServer;
-
-    @Column(length = 50, nullable = false)
     private OsType osType;
-
-    @Column(length = 2000, nullable = false)
     private String message;
-
-    @Column(nullable = false)
     private String title;
-
-    @Column(nullable = false)
     private String body;
-
-    @Column
     private String resultCode;
+    private String latitude;
+    private String longitude;
+    private String address;
+    private String type;
+
 
     private Push(Builder builder) {
         entityId = builder.entityId;
@@ -45,7 +29,11 @@ public class Push extends BaseTimeEntity {
         message = builder.message;
         title = builder.title;
         body = builder.body;
-        resultCode = builder.resultCode;
+        latitude = builder.resultCode;
+        latitude = builder.latitude;
+        longitude = builder.longitude;
+        address = builder.address;
+        type = builder.type;
     }
 
     public Push() {}
@@ -122,6 +110,38 @@ public class Push extends BaseTimeEntity {
         this.resultCode = resultCode;
     }
 
+    public String getLatitude() {
+        return latitude;
+    }
+
+    public void setLatitude(String latitude) {
+        this.latitude = latitude;
+    }
+
+    public String getLongitude() {
+        return longitude;
+    }
+
+    public void setLongitude(String longitude) {
+        this.longitude = longitude;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
     public static class Builder {
 
         private Long entityId;
@@ -133,6 +153,10 @@ public class Push extends BaseTimeEntity {
         private String title;
         private String body;
         private String resultCode;
+        private String latitude;
+        private String longitude;
+        private String address;
+        private String type;
 
         public Builder setEntityId(Long entityId) {
             this.entityId = entityId;
@@ -176,6 +200,26 @@ public class Push extends BaseTimeEntity {
 
         public Builder setResultCode(String resultCode) {
             this.body = resultCode;
+            return this;
+        }
+
+        public Builder setLatitude(String latitude) {
+            this.latitude = latitude;
+            return this;
+        }
+
+        public Builder setLongitude(String longitude) {
+            this.longitude = longitude;
+            return this;
+        }
+
+        public Builder setAddress(String address) {
+            this.address = address;
+            return this;
+        }
+
+        public Builder setType(String type) {
+            this.type = type;
             return this;
         }
 

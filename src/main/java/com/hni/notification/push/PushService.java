@@ -12,11 +12,6 @@ import java.nio.charset.StandardCharsets;
 @Service
 public class PushService {
 
-    private final PushRepository pushRepository;
-
-    public PushService(PushRepository pushRepository) {
-        this.pushRepository = pushRepository;
-    }
     public Logger logger = LoggerFactory.getLogger(this.getClass());
 
     protected String sendPushServer(Push push) throws UnsupportedEncodingException {
@@ -43,6 +38,9 @@ public class PushService {
                 .setAndroidConfig(AndroidConfig.builder()
                         .setTtl(0)
                         .setPriority(AndroidConfig.Priority.NORMAL)
+                        .putData("latitude", (push.getLatitude().isEmpty()) ? "" : push.getLatitude()) // 위도 Test custom data code
+                        .putData("longitude", (push.getLongitude().isEmpty()) ? "" : push.getLatitude()) // 경도 Test custom data code
+                        .putData("address", (push.getAddress().isEmpty()) ? "" : push.getLatitude()) // Test custom data code
                         .putData("body", push.getBody())
                         .setNotification(AndroidNotification.builder()
                                 .setTitle(push.getTitle())
@@ -53,9 +51,12 @@ public class PushService {
     }
 
     private Message buildIosMessage(Push push) throws UnsupportedEncodingException {
+
         return Message.builder()
                 .setApnsConfig(ApnsConfig.builder()
-                        .putCustomData("FencingInfo", 1L) // Test custom data code
+                        .putCustomData("latitude", (push.getLatitude().isEmpty()) ? "" : push.getLatitude()) // 위도 Test custom data code
+                        .putCustomData("longitude", (push.getLongitude().isEmpty()) ? "" : push.getLatitude()) // 경도 Test custom data code
+                        .putCustomData("address", (push.getAddress().isEmpty()) ? "" : push.getLatitude()) // Test custom data code
                         .setAps(Aps.builder().build())
                         .build())
                 .setToken(push.getToken())
@@ -68,14 +69,12 @@ public class PushService {
             String result = FirebaseMessaging.getInstance().send(message);
             push.setResultCode(result);
 
-            pushRepository.save(push);
 
             logger.info("success message sending | {} | {}", push.getDeviceId(), result);
 
             return result;
         } catch (FirebaseMessagingException e) {
             push.setResultCode("Failed");
-            pushRepository.save(push);
 
             logger.error("Failed to send push notification: {}", push.getDeviceId(), e);
             logger.error("Failed to send push notification token: {}", push.getToken(), e);
